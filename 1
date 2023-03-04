@@ -1,0 +1,56 @@
+task1:
+    class movie{
+        constructor(title = '', studio = '', rating = 'pg'){
+            this.title = title;
+            this.studio = studio;
+            this.rating = rating;
+        }
+    }
+
+    function getPG(movie = [], rating =''){
+    return movie.filter((m) => m.rating===rating);
+    }
+
+    const CasinoRoyale = new movie("Casino Royale", "Eon Productions",'PG13');
+    const rockStar = new movie("rockstar", "padma studio", 'PG');
+    const vikram = new movie("vikram", "kamala studio", 'PG');
+    const arjun = new movie("arjun", "kamala studio", 'R');
+    const vijay = new movie("vijay", "kamala studio", 'R');
+
+    const movieArray = [CasinoRoyale, rockStar, vikram, arjun, vijay];
+
+    console.log(getPG(movieArray, 'R'));
+-------------------------------------------------------------------------------------------------
+
+Task2:
+class circle{
+    constructor(radius = 1.0, color = "Red" ){
+        this.radius = radius;
+        this.color = color;
+    }
+}
+-------------------------------------------------------------------------------------------------
+Task:3
+
+class person{
+    constructor(name= '', age = 0, qualification = {}, nationality = ''  ){
+        this.name = name;
+        this.age = age;
+        this.qualification = qualification;
+        this.nationality = nationality;
+    }
+}
+
+function getQualification(person = [], qualification = []){
+    return person.filter((q)=> q.qualification === qualification);
+}
+
+const vijay = new person("vijay", 25, "physics", "india")
+const vijay1 = new person("vijay1", 26,  "biology", "america")
+const vijay2= new person("vijay3", 27, "zoology", "ukanda")
+const vijay3 = new person("vijay4", 28, "maths", "singapore")
+
+var personArray = [vijay, vijay1, vijay2, vijay3]
+
+console.log(getQualification(personArray,"physics"));
+-------------------------------------------------------------------------------------------------
